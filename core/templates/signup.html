@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h3 class="mb-3">Criar conta</h3>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success w-100">Cadastrar</button>
+            <div class="text-center mt-2">
+                <a href="{% url 'login' %}">Já tenho conta</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

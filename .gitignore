@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ambiente virtual
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# IDEs / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Pipenv / Poetry (se usar)
+Pipfile.lock
+poetry.lock
+
+# Coverage / Testes
+.coverage
+htmlcov/
+.pytest_cache/

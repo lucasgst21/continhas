@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="mb-3">Nova transação</h3>
+<div class="card">
+    <div class="card-body">
+        <form method="post" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">{{ form.account.label }}</label>
+                    {{ form.account }}
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">{{ form.category.label }}</label>
+                    {{ form.category }}
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">{{ form.kind.label }}</label>
+                    {{ form.kind }}
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">{{ form.amount.label }}</label>
+                    {{ form.amount }}
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">{{ form.date.label }}</label>
+                    {{ form.date }}
+                </div>
+                <div class="col-12">
+                    <label class="form-label">{{ form.description.label }}</label>
+                    {{ form.description }}
+                </div>
+            </div>
+            <button class="btn btn-success mt-3">Salvar</button>
+            <a class="btn btn-link mt-3" href="{% url 'transaction_list' %}">Voltar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

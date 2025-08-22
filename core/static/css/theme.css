@@ -1,0 +1,186 @@
+/* ==== Paleta ==== */
+:root {
+    /* Tua paleta */
+    --brand-900: #063940;
+    /* bem escuro */
+    --brand-700: #195e63;
+    /* primária */
+    --brand-500: #3e838c;
+    /* acento */
+    --brand-300: #8ebdb6;
+    /* claro */
+    --brand-100: #ece1c3;
+    /* areia */
+
+    /* Mapeia para Bootstrap (override) */
+    --bs-primary: var(--brand-700);
+    --bs-secondary: var(--brand-500);
+    --bs-success: var(--brand-300);
+    --bs-info: var(--brand-500);
+    --bs-warning: var(--brand-100);
+    --bs-danger: #7a2a2a;
+    /* fora da paleta, mas discreto */
+    --bs-light: #f8f9fa;
+    --bs-dark: var(--brand-900);
+}
+
+/* ==== Base / Corpo ==== */
+body {
+    background: #f9f7ef;
+    /* um tom próximo do --brand-100, levemente mais suave */
+    color: #1f2a2e;
+}
+
+/* Links */
+a {
+    color: var(--brand-700);
+}
+
+a:hover {
+    color: var(--brand-500);
+}
+
+/* ==== Navbar ==== */
+.navbar {
+    background: var(--brand-900) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .btn {
+    color: var(--brand-100) !important;
+}
+
+.navbar .btn-outline-secondary {
+    color: var(--brand-100) !important;
+    border-color: rgba(236, 225, 195, .5);
+}
+
+.navbar .btn-outline-secondary:hover {
+    background: var(--brand-700);
+    border-color: var(--brand-700);
+}
+
+/* ==== Botões ==== */
+.btn-primary {
+    background: var(--brand-700);
+    border-color: var(--brand-700);
+}
+
+.btn-primary:hover {
+    background: var(--brand-500);
+    border-color: var(--brand-500);
+}
+
+.btn-success {
+    background: var(--brand-300);
+    border-color: var(--brand-300);
+    color: #09343a;
+}
+
+.btn-success:hover {
+    background: var(--brand-500);
+    border-color: var(--brand-500);
+    color: #fff;
+}
+
+.btn-danger {
+    background: #7a2a2a;
+    border-color: #7a2a2a;
+}
+
+/* ==== Cards ==== */
+.card {
+    border: 1px solid rgba(8, 57, 64, 0.08);
+    box-shadow: 0 2px 12px rgba(6, 57, 64, 0.06);
+    border-radius: 1rem;
+}
+
+.card-header {
+    background: linear-gradient(180deg, rgba(25, 94, 99, .08), transparent);
+    border-bottom: 1px solid rgba(6, 57, 64, .08);
+}
+
+/* Destacar cards de resumo no dashboard */
+.card.metric .card-body small {
+    color: #35565b;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.card.metric .card-body h3 {
+    color: var(--brand-900);
+}
+
+/* ==== Tabelas ==== */
+.table thead th {
+    background: var(--brand-700);
+    color: #fff;
+    border-color: var(--brand-700);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: rgba(236, 225, 195, .35);
+}
+
+/* ==== Formulários ==== */
+/* Mesmo sem widgets com classes, estilizamos elementos nativos */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    border: 1px solid rgba(6, 57, 64, .25);
+    border-radius: .5rem;
+    background-color: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--brand-500);
+    box-shadow: 0 0 0 .2rem rgba(62, 131, 140, .2);
+}
+
+/* Labels */
+.form-label {
+    font-weight: 600;
+    color: var(--brand-900);
+}
+
+/* ==== Badges úteis ==== */
+.badge-income {
+    background: var(--brand-300);
+    color: #09343a;
+}
+
+.badge-expense {
+    background: var(--brand-500);
+    color: #fff;
+}
+
+/* ==== Utilitários de cor ==== */
+.bg-brand-100 {
+    background: var(--brand-100) !important;
+}
+
+.bg-brand-300 {
+    background: var(--brand-300) !important;
+}
+
+.bg-brand-700 {
+    background: var(--brand-700) !important;
+}
+
+.text-brand-900 {
+    color: var(--brand-900) !important;
+}
+
+.text-brand-700 {
+    color: var(--brand-700) !important;
+}
